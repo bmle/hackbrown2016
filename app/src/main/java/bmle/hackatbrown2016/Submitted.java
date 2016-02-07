@@ -9,18 +9,27 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class SignUpActivity extends ActionBarActivity {
+public class Submitted extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_submitted);
 
-        Button choose = (Button) findViewById(R.id.bRegister);
-        choose.setOnClickListener(new View.OnClickListener() {
+        Button submit = (Button) findViewById(R.id.button4);
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpActivity.this, ChooseActivity.class);
+                Intent intent = new Intent(Submitted.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button another = (Button) findViewById(R.id.button5);
+        another.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Submitted.this, Question.class);
                 startActivity(intent);
             }
         });
@@ -30,7 +39,7 @@ public class SignUpActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sign_up, menu);
+        getMenuInflater().inflate(R.menu.menu_submitted, menu);
         return true;
     }
 

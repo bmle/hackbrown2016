@@ -1,36 +1,43 @@
 package bmle.hackatbrown2016;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-
-public class SignUpActivity extends ActionBarActivity {
+public class ChooseActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_choose);
 
-        Button choose = (Button) findViewById(R.id.bRegister);
-        choose.setOnClickListener(new View.OnClickListener() {
+        Button tutor = (Button) findViewById(R.id.tutor);
+        tutor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpActivity.this, ChooseActivity.class);
+                Intent intent = new Intent(ChooseActivity.this, Feed.class);
+                startActivity(intent);
+            }
+        });
+
+        Button help = (Button) findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChooseActivity.this, Question.class);
                 startActivity(intent);
             }
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sign_up, menu);
+        getMenuInflater().inflate(R.menu.menu_question, menu);
         return true;
     }
 
@@ -48,4 +55,5 @@ public class SignUpActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

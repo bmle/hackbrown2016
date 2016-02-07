@@ -16,6 +16,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button signup = (Button) findViewById(R.id.button2);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
