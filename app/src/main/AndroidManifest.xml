@@ -21,8 +21,12 @@
         </activity>
         <activity
             android:name=".SignUpActivity"
+<<<<<<< HEAD
             android:label="@string/title_activity_sign_up" >
         </activity>
+=======
+            android:label="@string/activity_signup"/>
+>>>>>>> 81a5395dc65cc5a68e038ce5a67f2c036f03d317
     </application>
 
 </manifest>
