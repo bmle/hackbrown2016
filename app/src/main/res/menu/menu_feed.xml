@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="bmle.hackatbrown2016.Question">
+    tools:context="bmle.hackatbrown2016.Feed">
     <item
         android:id="@+id/action_menu"
         android:orderInCategory="100"
@@ -14,7 +14,7 @@
                 android:icon="@drawable/settings_icon"/>
             <item
                 android:id="@+id/menu_switch"
-                android:title="Switch to Tutor Mode"
+                android:title="Switch to Tutoree Mode"
                 android:icon="@drawable/switch_icon"/>
         </menu>
     </item>
