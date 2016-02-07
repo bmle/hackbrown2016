@@ -11,11 +11,8 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".Register"
-            android:label="@string/title_activity_register"></activity>
->>>>>>> Stashed changes
             android:name=".SignUpActivity"
-            android:label="@string/activity_signup" />
+            android:label="@string/activity_signup"/>
     </application>
 
 </manifest>
