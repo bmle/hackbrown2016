@@ -27,7 +27,7 @@ public class SignUpActivity extends ActionBarActivity {
         USER_PASS = (EditText) findViewById(R.id.Password);
         CON_PASS = (EditText) findViewById(R.id.Confirm);
         REG = (Button) findViewById(R.id.bRegister);
-        REG.setOnClickListener(new OnClickListener(){
+        REG.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
