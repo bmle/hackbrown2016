@@ -18,7 +18,7 @@ public class Question extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
 
-        Button submit = (Button) findViewById(R.id.submit);
+        Button submit = (Button) findViewById(R.id.submitButton);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,7 +27,7 @@ public class Question extends ActionBarActivity {
             }
         });
 
-        Button goBack = (Button) findViewById(R.id.button6);
+        Button goBack = (Button) findViewById(R.id.goBackButton);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

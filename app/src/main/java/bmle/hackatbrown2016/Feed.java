@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Feed extends ActionBarActivity {
@@ -24,8 +25,6 @@ public class Feed extends ActionBarActivity {
                 startActivity(intent);
             }
         });
-<<<<<<< HEAD
-=======
 
         Bundle bundle = getIntent().getExtras();
         if(bundle == null) {
@@ -36,7 +35,6 @@ public class Feed extends ActionBarActivity {
             TextView txtView = (TextView) findViewById(R.id.textView9);
             txtView.setText(message);
         }
->>>>>>> origin/master
     }
 
     @Override
