@@ -3,8 +3,6 @@ package bmle.hackbrown2016;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
-public class Register extends ActionBarActivity {
-
 public class SignUpActivity extends ActionBarActivity {
 
     @Override
@@ -12,5 +10,4 @@ public class SignUpActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
     }
-
 }
