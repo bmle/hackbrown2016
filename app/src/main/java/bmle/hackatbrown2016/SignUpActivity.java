@@ -1,9 +1,12 @@
 package bmle.hackatbrown2016;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class SignUpActivity extends ActionBarActivity {
@@ -12,6 +15,15 @@ public class SignUpActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        Button choose = (Button) findViewById(R.id.bRegister);
+        choose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, ChooseActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
