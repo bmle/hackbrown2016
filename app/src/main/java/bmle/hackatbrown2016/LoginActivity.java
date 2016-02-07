@@ -15,6 +15,7 @@ public class LoginActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         Button choose = (Button) findViewById(R.id.bLogin);
         choose.setOnClickListener(new View.OnClickListener() {
             @Override

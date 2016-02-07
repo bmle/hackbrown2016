@@ -18,5 +18,6 @@
     <string name="another">Submit another question</string>
     <string name="tutor">Tutor someone!</string>
     <string name="help">Get help!</string>
+    <string name="what">What would you like to do?</string>
 
 </resources>
