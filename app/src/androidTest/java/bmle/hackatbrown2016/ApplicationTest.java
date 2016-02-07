@@ -1,4 +1,4 @@
-package bmle.hackbrown2016;
+package bmle.hackatbrown2016;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
