@@ -25,6 +25,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
         Button login = (Button) findViewById(R.id.button);
         login.setOnClickListener(new View.OnClickListener() {
             @Override

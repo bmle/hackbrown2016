@@ -20,7 +20,7 @@ public class Submitted extends ActionBarActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Submitted.this, MainActivity.class);
+                Intent intent = new Intent(Submitted.this, ChooseActivity.class);
                 startActivity(intent);
             }
         });

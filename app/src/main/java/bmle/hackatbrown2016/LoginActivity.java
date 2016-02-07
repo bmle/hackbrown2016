@@ -7,14 +7,59 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.EditText;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.Toast;
+import android.content.Context;
+import android.database.Cursor;
 
 public class LoginActivity extends ActionBarActivity {
+    Button Login;
+    EditText USERNAME, USERPASS;
+    String username,userpass;
+    Context CTX = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Login = (Button) findViewById(R.id.bLogin);
+        USERNAME = (EditText)findViewById(R.id.Username);
+        USERPASS = (EditText)findViewById(R.id.Password);
+        Login.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                Bundle b = getIntent().getExtras();
+                int status = b.getInt("status");
+                if(status ==1) {
+                    Toast.makeText(getBaseContext(), "Please wait...", Toast.LENGTH_LONG);
+                    username = USERNAME.getText().toString();
+                    userpass = USERPASS.getText().toString();
+                    DatabaseOperations DOP = new DatabaseOperations(CTX);
+                    Cursor CR = DOP.getInformation(DOP);
+                    CR.moveToFirst();
+                    boolean loginstatus = false;
+                    String NAME = "";
+                    do {
+                        if (username.equals(CR.getString(0)) && (userpass.equals(CR.getString(1)))) {
+                            loginstatus = true;
+                            NAME = CR.getString(0);
+                        }
+                    } while(CR.moveToNext());
+                        if(loginstatus) {
+                            Toast.makeText(getBaseContext(), "Login Success", Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                        else {
+                            Toast.makeText(getBaseContext(), "Login Failed", Toast.LENGTH_LONG).show();
+                            finish();
+                        }
+                }
+            }
+
+        });
         Button choose = (Button) findViewById(R.id.bLogin);
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
