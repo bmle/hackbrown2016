@@ -25,6 +25,7 @@
         <activity
             android:name=".ChooseActivity"
             android:label="@string/title_activity_choose" />
+<<<<<<< Updated upstream
         <activity
             android:name=".Feed"
             android:label="@string/title_activity_feed" />
@@ -34,6 +35,8 @@
         <activity
             android:name=".Submitted"
             android:label="@string/submitted" />
+=======
+>>>>>>> Stashed changes
     </application>
 
 </manifest>
