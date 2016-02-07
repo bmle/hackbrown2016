@@ -5,10 +5,12 @@ import android.support.v7.app.ActionBarActivity;
 
 public class Register extends ActionBarActivity {
 
+public class SignUpActivity extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_signup);
     }
 
 }
