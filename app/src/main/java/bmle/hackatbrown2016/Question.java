@@ -25,6 +25,15 @@ public class Question extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
+        Button goBack = (Button) findViewById(R.id.button6);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Question.this, ChooseActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
