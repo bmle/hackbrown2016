@@ -3,7 +3,7 @@ package bmle.hackbrown2016;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
-public class Login extends ActionBarActivity {
+public class LoginActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
