@@ -20,10 +20,23 @@ public class Feed extends ActionBarActivity {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Feed.this, MainActivity.class);
+                Intent intent = new Intent(Feed.this, ChooseActivity.class);
                 startActivity(intent);
             }
         });
+<<<<<<< HEAD
+=======
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle == null) {
+            System.out.println("yoyoyo");
+        }
+        else {
+            String message = bundle.getString("message");
+            TextView txtView = (TextView) findViewById(R.id.textView9);
+            txtView.setText(message);
+        }
+>>>>>>> origin/master
     }
 
     @Override
