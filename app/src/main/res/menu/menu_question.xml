@@ -1,6 +1,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context="bmle.hackatbrown2016.Question">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_menu"
+        android:orderInCategory="100"
+        android:title="Menu"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_settings"
+                android:title="Settings"
+                android:icon="@drawable/settings_icon"/>
+            <item
+                android:id="@+id/menu_load"
+                android:title="Load"
+                android:icon="@drawable/load_icon"/>
+            <item
+                android:id="@+id/menu_new"
+                android:title="New"
+                android:icon="@drawable/new_icon"/>
+        </menu>
+    </item>
 </menu>

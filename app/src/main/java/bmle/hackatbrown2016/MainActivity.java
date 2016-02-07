@@ -52,19 +52,8 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_menu) {
-//            return true;
-//        }
-        switch(id) {
-            case R.id.menu_load:
-                Toast.makeText(getApplicationContext(), "Game loaded successfully", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.menu_save:
-                Toast.makeText(getApplicationContext(), "Game saved successfully", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.menu_new:
-                Toast.makeText(getApplicationContext(), "New game created successfully", Toast.LENGTH_SHORT).show();
-                break;
+        if (id == R.id.action_menu) {
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

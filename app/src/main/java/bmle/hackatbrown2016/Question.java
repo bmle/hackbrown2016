@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class Question extends ActionBarActivity {
@@ -52,8 +53,19 @@ public class Question extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+        switch(id) {
+            case R.id.menu_settings:
+                Toast.makeText(getApplicationContext(), "Settings clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu_load:
+                Toast.makeText(getApplicationContext(), "Game loaded successfully", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu_new:
+                Toast.makeText(getApplicationContext(), "New game created successfully", Toast.LENGTH_SHORT).show();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
