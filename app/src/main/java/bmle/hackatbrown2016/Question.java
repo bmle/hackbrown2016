@@ -27,8 +27,8 @@ public class Question extends ActionBarActivity {
 
         TITLE = (EditText) findViewById(R.id.editText);
         QUESTION = (EditText) findViewById(R.id.editText2);
-        REG = (Button) findViewById(R.id.submit);
-        REG.setOnClickListener(new View.OnClickListener(){
+        REG = (Button) findViewById(R.id.submitButton);
+        REG.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -37,11 +37,11 @@ public class Question extends ActionBarActivity {
 
                 DatabaseOperations DB = new DatabaseOperations(ctx);
                 DB.putInfo(DB, title, quest);
-                Log.d("database operations", " " +title + " " + quest);
+                Log.d("database operations", " " + title + " " + quest);
                 finish();
 
                 Intent intent1 = new Intent(Question.this, Feed.class);
-                intent1.putExtra("message",title + " " + quest);
+                intent1.putExtra("message", title + " " + quest);
                 startActivity(intent1);
 
                 Intent intent = new Intent(Question.this, Submitted.class);
@@ -49,27 +49,24 @@ public class Question extends ActionBarActivity {
             }
         });
 
-<<<<<<< Updated upstream
-        Button goBack = (Button) findViewById(R.id.button6);
-        submit.setOnClickListener(new View.OnClickListener() {
+        Button submitButton = (Button) findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Question.this, Submitted.class);
+                startActivity(intent);
+            }
+        });
+
+        Button goBackButton = (Button) findViewById(R.id.goBackButton);
+        goBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Question.this, ChooseActivity.class);
                 startActivity(intent);
             }
         });
-=======
-//        Button submit = (Button) findViewById(R.id.submit);
-//        submit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Question.this, Submitted.class);
-//                startActivity(intent);
-//            }
-//        });
->>>>>>> Stashed changes
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -92,5 +89,4 @@ public class Question extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }
