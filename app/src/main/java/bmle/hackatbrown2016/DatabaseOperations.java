@@ -12,7 +12,7 @@ import android.content.ContentValues;
 public class DatabaseOperations extends SQLiteOpenHelper {
 
     public static final int database_version = 1;
-    public String CREATE_QUERY = "CREATE TABLE " + TableData.TableInfo.TABLE_NAME+ "(" + TableData.TableInfo.QUESTION + " TEXT, "+ TableData.TableInfo.DESCRIPTION + "TEXT );";
+    public String CREATE_QUERY = "CREATE TABLE " + TableData.TableInfo.TABLE_NAME+ "(" + TableData.TableInfo.USER_NAME + " TEXT, "+ TableData.TableInfo.USER_PASS + " TEXT );";
 
     public DatabaseOperations(Context context) {
         super(context, TableData.TableInfo.DATABASE_NAME, null, database_version);
@@ -31,12 +31,12 @@ public class DatabaseOperations extends SQLiteOpenHelper {
 
     }
 
-    public void putInfo(DatabaseOperations dop, String question, String description) {
+    public void putInfo(DatabaseOperations dop, String name, String pass) {
 
         SQLiteDatabase SQ = dop.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(TableData.TableInfo.QUESTION, question);
-        cv.put(TableData.TableInfo.DESCRIPTION, description);
+        cv.put(TableData.TableInfo.USER_NAME, name);
+        cv.put(TableData.TableInfo.USER_PASS, pass);
         long k = SQ.insert(TableData.TableInfo.TABLE_NAME, null, cv);
         Log.d("Database operations", "One raw inserted");
     }

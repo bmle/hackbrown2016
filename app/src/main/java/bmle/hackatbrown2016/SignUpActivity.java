@@ -7,15 +7,48 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
+import android.content.Context;
 
 
 public class SignUpActivity extends ActionBarActivity {
 
+    EditText USER_NAME, USER_PASS, CON_PASS;
+    String user_name,user_pass,con_pass;
+    Button REG;
+    Context ctx = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        USER_NAME = (EditText) findViewById(R.id.Username);
+        USER_PASS = (EditText) findViewById(R.id.Password);
+        CON_PASS = (EditText) findViewById(R.id.Confirm);
+        REG = (Button) findViewById(R.id.bRegister);
+        REG.setOnClickListener(new OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                user_name = USER_NAME.getText().toString();
+                user_pass = USER_PASS.getText().toString();
+                con_pass = CON_PASS.getText().toString();
+
+                if (!(user_pass.equals(con_pass))) {
+                    Toast.makeText(getBaseContext(), "Passwords dont match", Toast.LENGTH_LONG).show();
+                    USER_NAME.setText("");
+                    USER_PASS.setText("");
+                    CON_PASS.setText("");
+                } else {
+                    DatabaseOperations DB = new DatabaseOperations(ctx);
+                    DB.putInfo(DB, user_name, user_pass);
+                    Toast.makeText(getBaseContext(), "Registration Success", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+            }
+
+        });
         Button choose = (Button) findViewById(R.id.bRegister);
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
