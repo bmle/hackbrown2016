@@ -8,5 +8,15 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_choose">Choose</string>
     <string name="title_activity_feed">Feed</string>
+    <string name="title_activity_question">Question</string>
+    <string name="submit_title">Submit a Question</string>
+    <string name="title">Title</string>
+    <string name="body">Body of question</string>
+    <string name="submit">Submit!</string>
+    <string name="submitted">Your question has been submitted!</string>
+    <string name="goback">Return to main page</string>
+    <string name="another">Submit another question</string>
+    <string name="tutor">Tutor someone!</string>
+    <string name="help">Get help!</string>
 
 </resources>
