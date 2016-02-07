@@ -46,16 +46,11 @@ public class SignUpActivity extends ActionBarActivity {
                     Toast.makeText(getBaseContext(), "Registration Success", Toast.LENGTH_LONG).show();
                     finish();
                 }
-            }
 
-        });
-        Button choose = (Button) findViewById(R.id.bRegister);
-        choose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 Intent intent = new Intent(SignUpActivity.this, ChooseActivity.class);
                 startActivity(intent);
             }
+
         });
     }
 

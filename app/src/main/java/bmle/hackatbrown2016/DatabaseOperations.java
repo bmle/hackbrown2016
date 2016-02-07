@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.util.Log;
 import android.content.ContentValues;
+import android.database.Cursor;
 
 /**
  * Created by FrankChiem on 2/7/16.
@@ -39,5 +40,12 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         cv.put(TableData.TableInfo.USER_PASS, pass);
         long k = SQ.insert(TableData.TableInfo.TABLE_NAME, null, cv);
         Log.d("Database operations", "One raw inserted");
+    }
+
+    public Cursor getInformation(DatabaseOperations dop) {
+        SQLiteDatabase SQ = dop.getReadableDatabase();
+        String[ ] columns = {TableData.TableInfo.USER_NAME, TableData.TableInfo.USER_PASS};
+        Cursor CR = SQ.query(TableData.TableInfo.TABLE_NAME, columns, null, null, null, null, null);
+        return CR;
     }
 }
