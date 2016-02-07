@@ -12,13 +12,9 @@
                 android:title="Settings"
                 android:icon="@drawable/settings_icon"/>
             <item
-                android:id="@+id/menu_load"
-                android:title="Load"
-                android:icon="@drawable/load_icon"/>
-            <item
-                android:id="@+id/menu_new"
-                android:title="New"
-                android:icon="@drawable/new_icon"/>
+                android:id="@+id/menu_switch"
+                android:title="Switch to Tutor Mode"
+                android:icon="@drawable/switch_icon"/>
         </menu>
     </item>
 </menu>

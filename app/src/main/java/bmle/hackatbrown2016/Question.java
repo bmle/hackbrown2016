@@ -52,19 +52,12 @@ public class Question extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
         switch(id) {
             case R.id.menu_settings:
                 Toast.makeText(getApplicationContext(), "Settings clicked", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.menu_load:
-                Toast.makeText(getApplicationContext(), "Game loaded successfully", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.menu_new:
-                Toast.makeText(getApplicationContext(), "New game created successfully", Toast.LENGTH_SHORT).show();
+            case R.id.menu_switch:
+                Toast.makeText(getApplicationContext(), "Switch modes activated", Toast.LENGTH_SHORT).show();
                 break;
         }
 
